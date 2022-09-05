@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product page</title>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+  </head>
+  <body class="product">
+    <header>
+      <h1>This is a E-Shop</h1>
+      <nav>
+        <a href="category.html">Categories</a>
+        <a href="category.html?brandname">Brands</a>
+        <a href="category.html">Season</a>
+      </nav>
+    </header>
+    <main>
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Brands</a></li>
+        <li class="brand"><a href="productlist.html">Nike</a></li>
+        <li class="productname">Item Description</li>
+      </ol>
+      <img
+        class="productimage"
+        src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp"
+        alt="item alt"
+      />
+      <section class="purchaseBox">
+        <h3 class="productname">Product Description</h3>
+        <p><span></span> | <span></span></p>
+        <form> 
+          <label>
+            Choose a size
+            <select name="size">
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button>Add to basket</button>
+        </form>
+      </section>
+      <section class="info">
+        <h2>Product Information</h2>
+        <dl>
+          <dt>Model name</dt>
+          <dd class="productname">insert model name here</dt>
+          <dt>Color</dt>
+          <dd class="basecolour">insert color here</dt>
+          <dt>Inventory number</dt>
+          <dd class="id">insert inventory number here</dt>
+        </dl>
+        <h3>Nike</h3>
+        <p>brand's motto</p>
+      </section>
+    </main>
+    <script src="js/productpage.js"></script>
+  </body>
+</html>

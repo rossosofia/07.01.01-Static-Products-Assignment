@@ -1,0 +1,186 @@
+:root {
+  --background-color: white;
+  --box-color: darkgray;
+}
+
+/* ------------  PRODUCT LIST ------------ */
+
+/* GENERAL STRUCTURE (THIS SHOULD BE CHANGED IN ::ROOT */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.5vw 0 0.5vw 0;
+}
+
+/* when working with more pages, "body" is too general. Is better to work with ids/classes and :root, because sometime we need to refer to and element inside the "body", but is not the same "body" for everyone :)) */
+body {
+  margin: 2vw 10vw 5vw 10vw;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* same problem here. "section" which one? I don't want every section to behave the same way. */
+section.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+article {
+  max-width: 20%;
+  margin-bottom: 3vw;
+  padding: 2vw;
+}
+
+article img {
+  max-width: 100%;
+}
+
+/* LINK AND TEXT STYLE 
+this shoud be turned into root*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+img:hover {
+  opacity: 80%;
+}
+
+p.subtle {
+  font-size: 1vw;
+}
+
+h3.product_name {
+  font-size: 1vw;
+}
+
+p.price {
+  font-size: 1vw;
+}
+
+div.discounted {
+  color: red;
+}
+
+/* INTERACTIONS AND IF STATEMENTS for product list*/
+
+.productlist article.onSale p.price {
+  text-decoration: line-through;
+}
+
+/* when an article as the sold out class take the image and fade it out.
+is a sort of if statement */
+.productlist article.soldOut img {
+  opacity: 0.5;
+}
+
+/* if the article has the class soldOut, create this content
+In CSS, ::before creates a pseudo-element that is the first child of the selected element.   */
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  font-size: 1vw;
+  position: absolute;
+  z-index: 1;
+  background-color: red;
+  color: white;
+  padding: 1vw;
+}
+
+/* Each article has a price element (full price and discount price)
+what we are saying is that by default DON'T show price and discounted price */
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+}
+
+/* but when the product is on sale, grab the discounted and do this*/
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1vw;
+}
+
+/* grab span and show it again*/
+.productlist article.onSale .price span {
+  display: initial;
+}
+
+/* ------------ PRODUCT PAGE ----------- */
+
+/*  BREADCRUMBS */
+/* Notice that the content ">" has been added using pseudo elements, so thay do not existi in the html */
+
+.breadcrumbs {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.breadcrumbs li::after {
+  display: inline-block;
+  margin: 0 10px;
+  content: ">";
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+
+.productimage {
+  display: block;
+  max-width: 100%;
+}
+
+.purchaseBox {
+  background: var(--box-color);
+  color: var(--background-color);
+  padding: 1rem;
+}
+
+.info {
+  padding: 1rem;
+}
+
+select option {
+  min-width: 100px;
+}
+
+main {
+  display: grid;
+}
+
+.product main .breadcrumbs,
+.product main img {
+  grid-column: 1/-1;
+}
+
+.purchaseBox form label {
+  gap: 1rem;
+}
+
+.purchaseBox button {
+  display: block;
+  margin-top: 1rem;
+}
+
+dt {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1000px) {
+  .product main {
+    grid-template-columns: 1fr 310px;
+  }
+  .info {
+    order: 0;
+  }
+  .purchaseBox {
+    order: 2;
+    transform: translate(-50px, -100px);
+  }
+}

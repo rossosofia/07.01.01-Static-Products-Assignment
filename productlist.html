@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product list</title>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+  </head>
+  <body class="productlist">
+    <header>
+      <h1>This is a E-Shop</h1>
+      <nav>
+        <a href="category.html">Categories</a>
+        <a href="">Brands</a>
+        <a href="">Season</a>
+      </nav>
+    </header>
+    <main>
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li class="first"><a href="#">First</a></li>
+        <li class="second"><a href="#">Second</a></li>
+      </ol>
+      <section class="content">
+        <template id="smallProductTemplate">
+          <article class="smallproducts">
+            <a href="productpage.html?id=1530">
+              <img
+                class="productimage"
+                src="https://kea-alt-del.dk/t7/images/webp/1000/1541.webp"
+                alt="Product image"
+              />
+              <h3 class="product_name">Description</h3>
+              <p class="subtle">Shoes | Nike</p>
+              <p class="price">DKK 1595-</p>
+              <div class="discounted">
+                <p>DKK 1560,--</p>
+                <p>-34%</p>
+              </div>
+            </a>
+          </article>
+        </template>
+      </section>
+
+      <!-- <article class="smallproducts onSale">
+          <a href="productpage.html">
+            <img
+              src="https://kea-alt-del.dk/t7/images/webp/1000/1543.webp"
+              alt="Product image"
+            />
+            <h3 class="product_name">Description</h3>
+            <p class="subtle">Shoes | Nike</p>
+            <p class="price"><span>Prev.</span> dkk 1595-</p>
+            <div class="discounted">
+              <p>DKK 1560,--</p>
+              <p>-34%</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="smallproducts soldOut">
+          <a href="productpage.html">
+            <img
+              src="https://kea-alt-del.dk/t7/images/webp/1000/1544.webp"
+              alt="Product image"
+            />
+            <h3 class="product_name">Description</h3>
+            <p class="subtle">Shoes | Nike</p>
+            <p class="price"><span>Prev.</span> dkk 1595-</p>
+            <div class="discounted">
+              <p>DKK 1560,--</p>
+              <p>-34%</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="smallproducts soldOut onSale">
+          <a href="productpage.html">
+            <img
+              src="https://kea-alt-del.dk/t7/images/webp/1000/1545.webp"
+              alt="Product image"
+            />
+            <h3 class="product_name">Description</h3>
+            <p class="subtle">Shoes | Nike</p>
+            <p class="price"><span>Prev.</span> dkk 1595-</p>
+            <div class="discounted">
+              <p>DKK 1560,--</p>
+              <p>-34%</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="smallproducts">
+          <a href="productpage.html">
+            <img
+              src="https://kea-alt-del.dk/t7/images/webp/1000/1546.webp"
+              alt="Product image"
+            />
+            <h3 class="product_name">Description</h3>
+            <p class="subtle">Shoes | Nike</p>
+            <p class="price"><span>Prev.</span> dkk 1595-</p>
+            <div class="discounted">
+              <p>DKK 1560,--</p>
+              <p>-34%</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="smallproducts">
+          <a href="productpage.html">
+            <img
+              src="https://kea-alt-del.dk/t7/images/webp/1000/1547.webp"
+              alt="Product image"
+            />
+            <h3 class="product_name">Description</h3>
+            <p class="subtle">Shoes | Nike</p>
+            <p class="price"><span>Prev.</span> dkk 1595-</p>
+            <div class="discounted">
+              <p>DKK i560,--</p>
+              <p>-34%</p>
+            </div>
+          </a>
+        </article> -->
+    </main>
+    <footer></footer>
+    <script src="js/productlist.js"></script>
+  </body>
+</html>
